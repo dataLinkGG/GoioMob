@@ -59,3 +59,12 @@ Run the development server:
 ```bash
 bun run dev
 ```
+
+# Deploy
+
+We won't be using GitHub pages or Vercel, since they have strick rules about commercial use. Instead, we will use 
+explicitly allows commercial use on its free tier.
+
+```bash
+bun run build
+```
