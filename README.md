@@ -72,6 +72,14 @@ bun run dev
 We won't be using GitHub pages or Vercel, since they have strick rules about commercial use. Instead, we will use 
 explicitly allows commercial use on its free tier.
 
+Build the app:
+
 ```bash
 bun run build
+```
+
+Start the app in production mode (localhost):
+
+```bash
+bun run start
 ```
