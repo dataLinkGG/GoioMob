@@ -60,6 +60,13 @@ Run the development server:
 bun run dev
 ```
 
+# Lighthouse Metrics:
+
+- Performance: 100%
+- Accessibility: 96%
+- Best Practices: 100%
+- SEO: 92%
+
 # Deploy
 
 We won't be using GitHub pages or Vercel, since they have strick rules about commercial use. Instead, we will use 
