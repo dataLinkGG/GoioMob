@@ -62,10 +62,10 @@ bun run dev
 
 # Lighthouse Metrics:
 
-- Performance: 100%
+- Performance: 97%
 - Accessibility: 96%
 - Best Practices: 100%
-- SEO: 92%
+- SEO: 100%
 
 # Deploy
 
