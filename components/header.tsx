@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Passageiros", href: "#beneficios" },
   { label: "Motoristas", href: "#motoristas" },
+  { label: "Privacidade", href: "#privacidade" },
   { label: "Contato", href: "#contato" },
 ]
 
