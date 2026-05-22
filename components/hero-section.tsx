@@ -54,19 +54,18 @@ export function HeroSection() {
         </div>
 
         {/* Phone mockup */}
-        <div className="relative flex flex-1 items-center justify-center">
-          <div className="relative aspect-[9/16] w-64 overflow-hidden rounded-[2.5rem] border-4 border-foreground/10 bg-primary shadow-2xl sm:w-72 lg:w-80">
+        <div className="relative flex w-full flex-1 items-center justify-center">
+          <div className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[20rem]">
             <Image
-              src="/images/phone-mockup.jpg"
-              alt="Tela do aplicativo Goio Mob mostrando mapa com rota"
-              fill
-              className="object-cover"
+              src="/print_phone.png"
+              alt="Tela do aplicativo Goio Mob mostrando mapa com rota e confirmação de viagem"
+              width={440}
+              height={880}
+              className="h-auto w-full object-contain drop-shadow-2xl"
+              sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
               priority
             />
-            {/* Notch */}
-            <div className="absolute left-1/2 top-2 h-6 w-24 -translate-x-1/2 rounded-full bg-foreground/80" />
           </div>
-          {/* Decorative ring */}
           <div className="absolute -z-10 h-72 w-72 rounded-full border border-accent/20 lg:h-96 lg:w-96" />
           <div className="absolute -z-10 h-96 w-96 rounded-full border border-accent/10 lg:h-[28rem] lg:w-[28rem]" />
         </div>
