@@ -36,6 +36,10 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "__v0_devtools.tsx",
+    "__v0_runtime_loader.js",
+    "__v0_jsx-dev-runtime.ts",
+    ".v0-trash"
   ]
 }

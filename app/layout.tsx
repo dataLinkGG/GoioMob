@@ -9,23 +9,9 @@ export const metadata: Metadata = {
   title: 'Goio Mob - A mobilidade que Goioerê merece',
   description:
     'Viagens seguras, motoristas locais e o preço mais justo da cidade. Baixe agora o Goio Mob, o app de mobilidade urbana de Goioerê, Paraná.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/goio_mob_logo.webp',
+    apple: '/goio_mob_logo.webp',
   },
 }
 

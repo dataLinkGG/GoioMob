@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Menu, X, Download } from "lucide-react"
+import { GoioMobLogo } from "@/components/goio-mob-logo"
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -18,9 +19,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <a href="#inicio" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">G</span>
-          </div>
+          <GoioMobLogo size="md" />
           <span className="text-xl font-bold tracking-tight text-foreground">
             Goio <span className="text-accent">Mob</span>
           </span>

@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react"
+import { GoioMobLogo } from "@/components/goio-mob-logo"
 
 export function Footer() {
   return (
@@ -8,9 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
-                <span className="text-xs font-bold text-accent-foreground">G</span>
-              </div>
+              <GoioMobLogo size="sm" className="bg-primary-foreground/10" />
               <span className="text-lg font-bold text-primary-foreground">
                 Goio <span className="text-accent">Mob</span>
               </span>
