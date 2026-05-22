@@ -43,12 +43,12 @@ export function HeroSection() {
           {/* Social proof */}
           <div className="mt-8 flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
-              <span className="font-semibold text-foreground">4.9</span>
+              <span className="font-semibold text-foreground">5.0</span>
               <Star className="h-4 w-4 fill-accent text-accent" />
             </span>
             <span className="h-4 w-px bg-border" />
             <span>
-              Mais de <span className="font-semibold text-foreground">100</span> downloads
+              Mais de <span className="font-semibold text-foreground">1.000</span> downloads
             </span>
           </div>
         </div>
