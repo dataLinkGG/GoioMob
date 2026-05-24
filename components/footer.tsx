@@ -9,9 +9,9 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <GoioMobLogo size="sm" className="bg-primary-foreground/10" />
+              <GoioMobLogo size="sm" decorative className="bg-primary-foreground/10" />
               <span className="text-lg font-bold text-primary-foreground">
-                Goio <span className="text-accent">Mob</span>
+                Goio <span className="text-accent-on-dark">Mob</span>
               </span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-primary-foreground/60">
@@ -34,13 +34,13 @@ export function Footer() {
                 33.900.839/0001-35
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-3.5 w-3.5 text-accent" />
+                <Mail className="h-3.5 w-3.5 text-accent-on-dark" aria-hidden="true" />
                 <a href="mailto:goioeremob@gmail.com" className="transition-colors hover:text-primary-foreground">
                   goioeremob@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-accent" />
+                <Phone className="h-3.5 w-3.5 text-accent-on-dark" aria-hidden="true" />
                 <a href="https://wa.me/5544999276259" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">
                   (44) 99927-6259
                 </a>
@@ -82,7 +82,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-primary-foreground/10 pt-6">
-          <p className="text-center text-xs text-primary-foreground/40">
+          <p className="text-center text-xs text-primary-foreground/65">
             {`© ${new Date().getFullYear()} GOIO MOB LTDA. Todos os direitos reservados.`}
           </p>
         </div>

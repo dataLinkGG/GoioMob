@@ -21,7 +21,6 @@ export function HeroSection() {
             Viagens seguras, motoristas locais e o preço mais justo da cidade. Baixe agora o Goio Mob.
           </p>
 
-          {/* Buttons */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="https://play.google.com/store/apps/details?id=br.com.goiomob.passenger.drivermachine"
@@ -40,34 +39,38 @@ export function HeroSection() {
             </a>
           </div>
 
-          {/* Social proof */}
           <div className="mt-8 flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <span className="font-semibold text-foreground">5.0</span>
-              <Star className="h-4 w-4 fill-accent text-accent" />
+              <Star className="h-4 w-4 fill-accent text-accent" aria-hidden="true" />
             </span>
-            <span className="h-4 w-px bg-border" />
+            <span className="h-4 w-px bg-border" aria-hidden="true" />
             <span>
               Mais de <span className="font-semibold text-foreground">1.000</span> downloads
             </span>
           </div>
         </div>
 
-        {/* Phone mockup */}
+        {/* Phone mockup — LCP element */}
         <div className="relative flex w-full flex-1 items-center justify-center">
-          <div className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[20rem]">
+          <div className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[20rem] [contain:layout]">
             <Image
               src="/print_phone.png"
-              alt="Tela do aplicativo Goio Mob mostrando mapa com rota e confirmação de viagem"
-              width={440}
-              height={880}
-              className="h-auto w-full object-contain drop-shadow-2xl"
+              alt="Mapa e confirmação de viagem no app Goio Mob"
+              width={320}
+              height={640}
+              quality={85}
+              className="h-auto w-full object-contain"
               sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
               priority
+              fetchPriority="high"
             />
           </div>
-          <div className="absolute -z-10 h-72 w-72 rounded-full border border-accent/20 lg:h-96 lg:w-96" />
-          <div className="absolute -z-10 h-96 w-96 rounded-full border border-accent/10 lg:h-[28rem] lg:w-[28rem]" />
+          <div className="absolute -z-10 h-72 w-72 rounded-full border border-accent/20 lg:h-96 lg:w-96" aria-hidden="true" />
+          <div
+            className="absolute -z-10 h-96 w-96 rounded-full border border-accent/10 lg:h-[28rem] lg:w-[28rem]"
+            aria-hidden="true"
+          />
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import { Menu, X, Download } from "lucide-react"
 import { GoioMobLogo } from "@/components/goio-mob-logo"
 
@@ -14,13 +14,14 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [, startTransition] = useTransition()
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <a href="#inicio" className="flex items-center gap-2">
-          <GoioMobLogo size="md" />
+          <GoioMobLogo size="md" decorative />
           <span className="text-xl font-bold tracking-tight text-foreground">
             Goio <span className="text-accent">Mob</span>
           </span>
@@ -53,7 +54,7 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => startTransition(() => setMobileOpen((open) => !open))}
           aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -69,7 +70,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => startTransition(() => setMobileOpen(false))}
               >
                 {link.label}
               </a>

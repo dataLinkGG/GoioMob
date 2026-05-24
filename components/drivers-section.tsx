@@ -7,12 +7,12 @@ export function DriversSection() {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left">
-            <span className="mb-4 inline-block rounded-full bg-accent/20 px-4 py-1.5 text-xs font-semibold text-accent">
+            <span className="mb-4 inline-block rounded-full border border-accent/40 bg-accent/15 px-4 py-1.5 text-xs font-semibold text-accent-on-dark">
               Para Motoristas
             </span>
             <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
               Aumente sua renda dirigindo com o{" "}
-              <span className="text-accent">Goio Mob</span>
+              <span className="text-accent-on-dark">Goio Mob</span>
             </h2>
             <p className="mt-5 max-w-lg text-pretty leading-relaxed text-primary-foreground/70">
               Taxas justas, controle total dos seus ganhos na tela do celular e
@@ -54,8 +54,8 @@ export function DriversSection() {
                 key={item.title}
                 className="flex items-start gap-4 rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-5"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/20">
-                  <item.icon className="h-5 w-5 text-accent" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/25">
+                  <item.icon className="h-5 w-5 text-accent-on-dark" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-primary-foreground">

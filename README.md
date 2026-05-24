@@ -54,6 +54,12 @@ Install dependencies:
 bun install
 ```
 
+This also generates `public/print_phone.webp` from the hero PNG (smaller LCP). Re-run manually if needed:
+
+```bash
+bun run optimize:images
+```
+
 Run the development server:
 
 ```bash

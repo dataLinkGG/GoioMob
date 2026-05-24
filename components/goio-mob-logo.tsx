@@ -9,9 +9,11 @@ const sizeClasses = {
 type GoioMobLogoProps = {
   size?: keyof typeof sizeClasses
   className?: string
+  /** Use when visible brand text is shown beside the logo */
+  decorative?: boolean
 }
 
-export function GoioMobLogo({ size = "md", className }: GoioMobLogoProps) {
+export function GoioMobLogo({ size = "md", className, decorative = false }: GoioMobLogoProps) {
   const px = size === "sm" ? 32 : 36
 
   return (
@@ -24,10 +26,11 @@ export function GoioMobLogo({ size = "md", className }: GoioMobLogoProps) {
     >
       <Image
         src="/goio_mob_logo.webp"
-        alt="Goio Mob"
+        alt={decorative ? "" : "Goio Mob"}
         width={px}
         height={px}
         className="h-full w-full object-contain p-0.5"
+        aria-hidden={decorative}
       />
     </div>
   )
