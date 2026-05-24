@@ -73,19 +73,35 @@ bun run dev
 - Best Practices: 100%
 - SEO: 100%
 
-# Deploy
+# Deploy (GitHub Actions → GitHub Pages)
 
-We won't be using GitHub pages or Vercel, since they have strick rules about commercial use. Instead, we will use 
-explicitly allows commercial use on its free tier.
+The site is a static export (`output: 'export'`) and deploys automatically when you push to `main`.
 
-Build the app:
+## One-time GitHub setup
+
+1. Push this repo to GitHub (public is fine).
+2. In the repo: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions**.
+3. If the site URL is `https://<user>.github.io/GoioMob/` (project site, not a user `.github.io` root repo), add a repository variable:
+   - **Settings → Secrets and variables → Actions → Variables**
+   - Name: `NEXT_PUBLIC_BASE_PATH`
+   - Value: `/GoioMob` (match your repo name exactly, with leading slash)
+4. Push to `main`. The workflow **Deploy to GitHub Pages** runs and publishes `out/`.
+
+## Workflows
+
+| File | Purpose |
+|------|---------|
+| `.github/workflows/ci.yml` | Build on every push/PR |
+| `.github/workflows/deploy-pages.yml` | Build + deploy to GitHub Pages on `main` |
+
+## Local production build
 
 ```bash
 bun run build
 ```
 
-Start the app in production mode (localhost):
+Static files are in `out/`. Serve locally with any static server, for example:
 
 ```bash
-bun run start
+npx serve out
 ```
