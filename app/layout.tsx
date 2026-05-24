@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { asset } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
   description:
     'Viagens seguras, motoristas locais e o preço mais justo da cidade. Baixe agora o Goio Mob, o app de mobilidade urbana de Goioerê, Paraná.',
   icons: {
-    icon: '/goio_mob_logo.webp',
-    apple: '/goio_mob_logo.webp',
+    icon: asset('/goio_mob_logo.webp'),
+    apple: asset('/goio_mob_logo.webp'),
   },
 }
 

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Star, ArrowDown } from "lucide-react"
+import { asset } from "@/lib/site"
 
 export function HeroSection() {
   return (
@@ -55,11 +56,10 @@ export function HeroSection() {
         <div className="relative flex w-full flex-1 items-center justify-center">
           <div className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[20rem] [contain:layout]">
             <Image
-              src="/print_phone.png"
+              src={asset("/print_phone.png")}
               alt="Mapa e confirmação de viagem no app Goio Mob"
               width={320}
               height={640}
-              quality={85}
               className="h-auto w-full object-contain"
               sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
               priority

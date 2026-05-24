@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { asset } from "@/lib/site"
 
 const sizeClasses = {
   sm: "h-8 w-8",
@@ -25,7 +26,7 @@ export function GoioMobLogo({ size = "md", className, decorative = false }: Goio
       )}
     >
       <Image
-        src="/goio_mob_logo.webp"
+        src={asset("/goio_mob_logo.webp")}
         alt={decorative ? "" : "Goio Mob"}
         width={px}
         height={px}
