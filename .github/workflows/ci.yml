@@ -25,6 +25,8 @@ jobs:
         run: bun run optimize:images
 
       - name: Build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: bun run build
 
       - name: Upload build artifact
