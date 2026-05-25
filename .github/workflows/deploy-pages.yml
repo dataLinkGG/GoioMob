@@ -36,8 +36,10 @@ jobs:
         id: pages
         run: |
           REPO="${{ github.event.repository.name }}"
-          # User/org site (repo named username.github.io) is served from /
-          if [[ "$REPO" == *.github.io ]]; then
+          # Custom domains and user/org sites are served from /
+          if [[ -f "public/CNAME" ]]; then
+            echo "base_path=" >> "$GITHUB_OUTPUT"
+          elif [[ "$REPO" == *.github.io ]]; then
             echo "base_path=" >> "$GITHUB_OUTPUT"
           else
             echo "base_path=/$REPO" >> "$GITHUB_OUTPUT"

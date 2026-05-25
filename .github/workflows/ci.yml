@@ -24,9 +24,21 @@ jobs:
       - name: Optimize images
         run: bun run optimize:images
 
+      - name: Resolve base path
+        id: pages
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          if [[ -f "public/CNAME" ]]; then
+            echo "base_path=" >> "$GITHUB_OUTPUT"
+          elif [[ "$REPO" == *.github.io ]]; then
+            echo "base_path=" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_path=/$REPO" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build
         env:
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: bun run build
 
       - name: Upload build artifact

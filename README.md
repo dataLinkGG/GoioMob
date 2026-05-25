@@ -81,11 +81,11 @@ The site is a static export (`output: 'export'`) and deploys automatically when 
 
 1. Push this repo to GitHub (public is fine).
 2. In the repo: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions**.
-3. If the site URL is `https://<user>.github.io/GoioMob/` (project site, not a user `.github.io` root repo), add a repository variable:
-   - **Settings → Secrets and variables → Actions → Variables**
-   - Name: `NEXT_PUBLIC_BASE_PATH`
-   - Value: `/GoioMob` (match your repo name exactly, with leading slash)
-4. Push to `main`. The workflow **Deploy to GitHub Pages** runs and publishes `out/`.
+3. For a custom domain, keep `public/CNAME` with the domain name (currently `goiomob.com.br`).
+4. Push to `main`. The deploy workflow sets `basePath` automatically:
+   - with `public/CNAME`: root `/`
+   - without `public/CNAME`: `/<repo>` (for project sites like `datalinkgg.github.io/GoioMob/`)
+5. If styles or images are missing after deploy, re-run **Actions → Deploy to GitHub Pages → Run workflow** after the latest push.
 
 ## Workflows
 
